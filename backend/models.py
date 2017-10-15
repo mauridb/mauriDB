@@ -19,5 +19,5 @@ class Skill(models.Model):
     skill_level = models.CharField(max_length=10) # TODO: better if enum type field BASIC|INTERMEDIATE|ADVANCED|MASTER|DOMAIN
     skill_value = models.DecimalField(max_digits=3, decimal_places=1)
     skill_likes = models.IntegerField()
-    project = models.ForeignKey(Project)
+    project = models.ForeignKey(Project, blank=True, null=True)
     owner = models.ForeignKey(User)

@@ -25,7 +25,8 @@ SECRET_KEY = 'laasr++v=^(3!#)3pq!d%cq2cwu2*w3cc%*rz0#0qn4kmtqn3#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# not sage in production
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -54,8 +55,8 @@ ROOT_URLCONF = 'mauridb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -82,10 +83,6 @@ DATABASES = {
         'PORT': 5432,
     }
 }
-
-# not for production usage
-ALLOWED_HOSTS = ['*']
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -122,5 +119,5 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'

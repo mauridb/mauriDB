@@ -1,3 +1,6 @@
+# static files
+static
+
 # Other things
 .idea/
 *pyc

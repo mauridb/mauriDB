@@ -1,6 +1,6 @@
 # Documentation
 
-This project born to be a support and a storage of my own development learnt 'skills' during hard development session at the week. This platform allow should allow add and descript our learnt 'things' stored in a SQL db.
+This project born to be a support and a storage of my own development learnt 'skills' during hard development session at the week. This platform should allow add and descript our learnt 'things', stored in a SQL db.
 
 ## Requirements
 ```
